@@ -1,7 +1,7 @@
 language: nodejs
 
 before_script:
-  - yarn run setup
+  - yarn
   - yarn run build
 
 script:
