@@ -1,27 +1,19 @@
-language: node_js
-node_js:
-  - "10"
+language: nodejs
 
-jobs:
-  include:
-    - stage: test
-      name: "Tests"
-      script: "yarn test"
-    - stage: lint
-      name: "Linting"
-      script: "yarn lint"
-    - stage: build
-      name: "Build"
-      script: "yarn build"
+before_script:
+  - yarn run setup
+  - yarn run build
 
-stages:
-  - test
-  - lint
-  - build
+script:
+  - yarn run test
+  - yarn run lint
+
+after_success:
+  - yarn run typedoc
+  - yarn pack
 
 deploy:
-  provider: npm
-  api_key: $NPM_API_KEY
-  skip_cleanup: true
-  email: "dlaubrei@gmail.com"
-
+  - provider: npm
+    skip_cleanup: true
+    email: "dlaubrei@gmail.com"
+    api_key: $NPM_API_KEY
