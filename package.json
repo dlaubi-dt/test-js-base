@@ -1,0 +1,25 @@
+{
+  "name": "@laubi/base",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "author": "David Laubreiter",
+  "license": "MIT",
+  "private": false,
+  "types": "types",
+  "devDependencies": {
+    "@types/jest": "^24.0.6",
+    "jest": "^24.1.0",
+    "ts-jest": "^24.0.0",
+    "tslint": "^5.13.0",
+    "typescript": "^3.3.3333"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "tslint"
+  },
+  "files": [
+    "dist",
+    "types"
+  ]
+}
