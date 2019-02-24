@@ -22,5 +22,6 @@ stages:
 deploy:
   provider: npm
   api_key: $NPM_API_KEY
+  skip_cleanup: true
   email: "dlaubrei@gmail.com"
 
