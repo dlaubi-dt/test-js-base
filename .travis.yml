@@ -1,4 +1,24 @@
 language: node_js
 node_js:
   - node
-  
+  - "4"
+  - "5"
+  - "6"
+  - "7"
+
+jobs:
+  include:
+    - stage: test
+      name: "Tests"
+      script: "yarn test"
+    - stage: lint
+      name: "Linting"
+      script: "yarn lint"
+    - stage: build
+      name: "Build"
+      script: "yarn build"
+
+stages:
+  - test
+  - lint
+  - build
