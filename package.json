@@ -21,5 +21,8 @@
   "files": [
     "dist",
     "types"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
