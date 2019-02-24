@@ -16,7 +16,7 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "lint": "tslint"
+    "lint": "tslint --project ."
   },
   "files": [
     "dist",
