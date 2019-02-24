@@ -22,3 +22,9 @@ stages:
   - test
   - lint
   - build
+
+deploy:
+  provider: npm
+  api_key: $NPM_API_KEY
+  email: "dlaubrei@gmail.com"
+
